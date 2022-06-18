@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <title>The Button</title>
+        <script>
+            function callAPI() {
+                let parameter = document.getElementById("param").value
+                console.log(parameter)
+
+                const myRequest = new Request('"https://reactiontimerleaderboard.azurewebsites.net/api/HttpExample?name="+parameter', {
+                method: 'GET',
+                mode: 'cors',
+                cache: 'default',
+                });
+
+                fetch(myRequest)
+                .then(response => console.log(response))
+            }
+            </script>
+    </head>
+    <body>
+        <canvas></canvas>
+        <input type="text" id="param"/>
+        <button onClick="callAPI()"> click me</button>
+        
+    </body>
+</html>
