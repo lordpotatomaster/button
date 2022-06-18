@@ -7,13 +7,7 @@
                 let parameter = document.getElementById("param").value
                 console.log(parameter)
 
-                const myRequest = new Request('"https://reactiontimerleaderboard.azurewebsites.net/api/HttpExample?name="+parameter', {
-                method: 'GET',
-                mode: 'cors',
-                cache: 'default',
-                });
-
-                fetch(myRequest)
+                fetch("https://reactiontimerleaderboard.azurewebsites.net/api/HttpExample?name="+parameter)
                 .then(response => console.log(response))
             }
             </script>
