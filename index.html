@@ -8,7 +8,7 @@
                 console.log(parameter)
 
                 fetch("https://reactiontimerleaderboard.azurewebsites.net/api/HttpExample?name="+parameter)
-                .then(response => console.log(response))
+                .then(response => console.log(response.json))
             }
             </script>
     </head>
